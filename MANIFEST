@@ -6,5 +6,7 @@ lib/Lemonldap/Cluster/StatusMP.pm
 Makefile.PL
 MANIFEST
 README
+LISEZMOI
+apache_status34.pl
 t/Lemonldap-Cluster-Status.t
 META.yml                                 Module meta-data (added by MakeMaker)

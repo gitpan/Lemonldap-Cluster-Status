@@ -25,7 +25,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 # Preloaded methods go here.
@@ -83,8 +83,8 @@ my  $unite='MB' ;
 $t = sprintf("%.2f",$t);
     my $tr =$self->{TREQUEST};
     my $ta = $self->{ACCESSES} ;
-    $ta=~ s/(\d{3})$/\.$1/;
- $ta=~ s/^(\d+)(\d{3})/$1\.$2/;
+#    $ta=~ s/(\d{3})$/\.$1/;
+# $ta=~ s/^(\d+)(\d{3})/$1\.$2/;
 
 my $message= <<DEBUT;
 
@@ -99,9 +99,9 @@ Lemonldap::Cluster::Status version: $self->{VERSION}<br>
 <hr>
 Current Time: $self->{TIME}<br>
 Number of Nodes: $self->{TNODES} : Status : $self->{STATUS}<br>
-Total Accesses: $ta - Total Traffic: $t $unite<br>
+Total accesses: $ta - Total Traffic: $t $unite<br>
 CPU Usage: min: $self->{MIN}% max: $self->{MAX}% ave : $self->{MOY}% CPU load<br>
-$tr  requests currently being processed, $self->{IDLE} idle servers<br>
+$tr requests currently being processed, $self->{IDLE} idle servers<br>
 
 <p>
 
